@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/attendance.css" />
+    <title>Attendance</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body>
+
+
+
+    <section class="AIVS">
+      <div><h2 class="aivs">CSV Records</h2></div>
+        {% block content1 %}
+
+<button onclick="exportTableToCSV('record.csv')"> Download </button>
+
+<style>
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.mystyle {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 70px 0;
+  width: 80%
+}
+
+.mystyle thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.mystyle tr:first-child td,
+
+tr td:first-child {
+    font-weight: bold;
+}
+
+
+.mystyle th,
+.mystyle td {
+  padding: 12px 15px;
+}
+
+.mystyle tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+<!--.mystyle tbody tr:nth-of-type(even) {-->
+<!--  background-color: #f3f3f3;-->
+<!--}-->
+
+.mystyle tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.mystyle tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+</style>
+
+
+<script>
+//user-defined function to download CSV file
+function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    //define the file type to text/csv
+    csvFile = new Blob([csv], {type: 'text/csv'});
+    downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.style.display = "none";
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
+
+//user-defined function to export the data to CSV file format
+function exportTableToCSV(filename) {
+   //declare a JavaScript variable of array type
+   var csv = [];
+   var rows = document.querySelectorAll("table tr");
+
+   //merge the whole data in tabular form
+   for(var i=0; i<rows.length; i++) {
+	var row = [], cols = rows[i].querySelectorAll("td, th");
+	for( var j=0; j<cols.length; j++)
+	   row.push(cols[j].innerText);
+	csv.push(row.join(","));
+   }
+   //call the function to download the CSV file
+   downloadCSV(csv.join("\n"), filename);
+}
+</script>
+
+
+<body>
+
+
+<table class="mystyle">
+{{ data | safe}}
+</table>
+</body>
+
+
+{% endblock content1 %}
+
+
+
+
+
+    </section>
+
+    <!--  Footer -->
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#about">About Us</a></li>
+            <li>
+              <a href="https://heightsforai.hashnode.dev/" target="blank"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://hrushi11.github.io/Heights-for-AI/"
+                target="blank"
+                >Doc Web</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/Hrushi11" target="blank"
+                ><ion-icon name="logo-github" class="github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/hrushikesh-kachgunde-73a90b186/"
+                target="blank"
+                ><ion-icon name="logo-linkedin" class="lin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:hrushiskachgunde@gmail.com"
+                ><ion-icon name="mail-outline" class="gm"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hrushi_ik/" target="blank"
+                ><ion-icon name="logo-instagram" class="ig"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="p">
+          Copyright &copy; 2022 &mdash; Team Ikshana <br />
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

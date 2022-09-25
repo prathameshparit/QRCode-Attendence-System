@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/mid-day-meal.css" />
+    <title>Mid Day Meal</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body>
+    <section class="AIVS">
+      <div><h2 class="aivs">Mid Day Meal Scan</h2></div>
+      <div class="vid-block">
+        <img src="{{ url_for('video_feed_mid_day_meal') }}" class="system" />
+      </div>
+    </section>
+
+    <!--  Footer -->
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#about">About Us</a></li>
+            <li>
+              <a href="https://heightsforai.hashnode.dev/" target="blank"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://hrushi11.github.io/Heights-for-AI/"
+                target="blank"
+                >Doc Web</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/Hrushi11" target="blank"
+                ><ion-icon name="logo-github" class="github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/hrushikesh-kachgunde-73a90b186/"
+                target="blank"
+                ><ion-icon name="logo-linkedin" class="lin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:hrushiskachgunde@gmail.com"
+                ><ion-icon name="mail-outline" class="gm"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hrushi_ik/" target="blank"
+                ><ion-icon name="logo-instagram" class="ig"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="p">
+          Copyright &copy; 2022 &mdash; Team Ikshana <br />
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+body {
+  background-color: black;
+}
+
+.AIVS {
+  margin-top: 20px;
+  padding-top: 0px;
+}
+
+.AIVS h2 {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 500px;
+      margin-right: 500px; */
+  padding-top: 2vh;
+  margin-left: 37vw;
+  margin-right: 37vw;
+  padding-bottom: 10px;
+
+  border-bottom: 5px solid rgb(237, 247, 247);
+}
+
+.aivs {
+  color: white;
+  font-size: 30px;
+}
+
+.system {
+  padding-top: 18px;
+  margin-top: 13px;
+  /* padding-left: 140px; */
+  margin-left: 24vw;
+  width: 50vw;
+  height: 80vh; /* 650px; */
+}
+
+.vid-block {
+  padding-bottom: 20px;
+}
+
+/* Scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 9px;
+}
+
+/* Footer */
+
+footer {
+  /* background-color: rgb(43, 41, 41); */
+  background-color: rgb(19, 2, 2);
+  padding: 45px 0 15px 0;
+  font-size: 97%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+  padding-left: 9px;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: rgb(175, 172, 172);
+  transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: white;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+
+.p {
+  color: rgba(255, 255, 255, 0.671);
+  text-align: center;
+  margin-top: 110px;
+}
+
+.p:hover {
+  color: white;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.github,
+.gm,
+.ig,
+.lin {
+  transition: color 0.3s;
+}
+
+.github:hover {
+  color: white;
+}
+
+.gm:hover {
+  color: white;
+}
+.ig:hover {
+  color: white;
+}
+.lin:hover {
+  color: white;
+}
+
+footer p {
+  cursor: context-menu;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  .AIVS {
+    padding-top: 0px;
+  }
+
+  .AIVS h2 {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 500px;
+		  margin-right: 500px; */
+    margin-left: 16vw;
+    margin-right: 16vw;
+    padding-bottom: 15px;
+
+    border-bottom: 5px solid rgb(237, 247, 247);
+  }
+
+  .about-para {
+    font-size: 21px;
+  }
+
+  .system {
+    padding-top: 0px;
+    margin-top: 25px;
+    /* padding-left: 140px; */
+    margin-left: 11vw;
+    margin-right: 8vw;
+    width: 75vw;
+    height: 55vh; /* 650px; */
+  }
+
+  /* Footer */
+  .footer-nav {
+    display: none;
+  }
+
+  .social-links {
+    width: 100%;
+    text-align: center;
+  }
+}
