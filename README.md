@@ -2,6 +2,12 @@
 
 This is our submission to SIH Hackathon 2022.
 
+Video Link- https://www.youtube.com/watch?v=chyeCbebxlc
+### App Screenshots:
+
+![Landing Page](https://github.com/prathameshparit/Dummy-Storage/blob/743303e7ed73d001e7bd3e49e2b35188476c62b7/readme%20images/QRCode-Attendence-System/landing.jpeg?raw=true)
+
+
 PSID: AK1095 
 
 **Context:** Teachers spend a lot of time in class updating records which are essential for managing large scale schooling operations in the country comprising of 
@@ -14,4 +20,11 @@ blocks such as Saral, NDEAR Registries. Establish national/state reference dashb
 
 **System Workflow:**
 
-![IMG](https://github.com/Hrushi11/QR_SCAN_SIH/blob/main/QR_SIH.drawio.png?raw=true)
+![IMG](https://github.com/prathameshparit/QRCode-Attendence-System/blob/778d64d0742c1ff51c1e7e3323f720dbb9c35214/QR_SIH.drawio.png?raw=true)
+
+
+
+
+
+
+
